@@ -1,0 +1,2 @@
+w_dict=NS.load_list('w_list.txt')
+NS.name_screen('unique_names_clean.txt','output.txt',w_dict)
