@@ -1,7 +1,36 @@
 '''
 Created on 31 Mar 2017
 
-@author: Xiaozhou
+@author: Xiaozhou Wang <Xiaozhou.wang85@gmail.com>
+
+Script that takes two lists of Chinese names and intersects them together. Both lists are
+converted into simplified Chinese. On the whole, traditional to simplified is a many to one
+relationship meaning by mapping to simplified a degree of "fuzzy matching" is introduced.
+The names are sorted before matching meaning that shuffled names will match also.
+
+Smaller list is loaded as a dictionary to speed up matching.
+
+Traditional to Simplified conversion taken from Jianfan by Leon Dong
+
+'''
+
+'''
+# author: Leon Dong <Leon.Dong@gmail.com>
+# commiter: Thomas <tsroten@gmail.com>
+
+    Jianfan is a library for translation between traditional and simplified chinese.
+    Support Python 2 and Python 3. Thanks for Thomas to provide Python 3 support.
+        two functions are provided by the library:
+        jtof: translate simplified chinese to traditional chinese
+        jtoj: translate traditional chinese to simplified chinese
+        the two functions accept one parameter that is unicode or string
+        the type of return value is unicode
+
+    Jianfan是一个简体中文和繁体中文转换的库。提供了两个函数：
+        jtof: 简体转换为繁体
+        ftoj: 繁体转换为简体
+        函数接受unicode和string类型作为参数，返回值统一为unicode
+
 '''
 import io
 import re
