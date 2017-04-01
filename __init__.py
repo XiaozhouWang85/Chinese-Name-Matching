@@ -58,6 +58,7 @@ def load_list(filename):
 
 def name_screen(infile,outfile,dict):
     count=0
+    start_time = time.time()
     #Infile should be utf-8 and be in format - Chinese Name, Name ID
     file = codecs.open(outfile, 'w','utf-8')
     with io.open(infile,'r',encoding='utf-8') as f:
@@ -73,6 +74,7 @@ def name_screen(infile,outfile,dict):
             count+=1
         except:
             pass
-    print(count)
+    print('Matched: '+str(count))
+    print('Run time:')
+    print("--- %s seconds ---" % (time.time() - start_time))
     file.close()
-
